@@ -1,23 +1,29 @@
 public class Main {
     public static void main(String[] args) {
 
-        //task 1
-        Bicycle mers = new Bicycle("Mersedes", 1);
+        Car mers = new Car("Mersedes");
+        Car bmw = new Car("BMW");
 
+        Bicycle aist = new Bicycle("Aist");
+        Bicycle schkol = new Bicycle("Schkolnik");
 
-        //task 2
-       Car mersedes = new Car("Mersedes", 4);
-        Car.checkEngine(mersedes);
+        Truck Wolc = new Truck("WolzWagen");
+        Truck Reno = new Truck("Reno",8);
 
-        //task 4
-        Truck mersedes1 = new Truck ("Mersedes", 4);
-        Truck.checkEngine(mersedes1);
-        Truck.checkTrailer(mersedes1);
+        Transport3[] transport3s = {
+                mers,
+                bmw,
+                aist,
+                schkol,
+                Wolc,
+                Reno
+        };
 
-        // task 3
-        ServiceStation.updateTyre(mersedes,mers, mersedes1);
-        ServiceStation.check(mersedes,mers, mersedes1);
+        ServiceStation serviceStation = new ServiceStation();
+
+        for (Transport3 transport3: transport3s){
+            serviceStation.chek(transport3);
+        }
 
     }
-    
 }
